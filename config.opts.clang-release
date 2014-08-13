@@ -1,0 +1,16 @@
+# This file is part of the dune-config-opts project:
+#   http://users.dune-project.org/projects/dune-config-opts
+# Copyright holders: Rene Milk, Felix Schindler
+# License: BSD 2-Clause License (http://opensource.org/licenses/BSD-2-Clause)
+
+CONFIGURE_FLAGS=" \
+  CC=clang \
+  CXX=clang++ \
+  F77=gfortran \
+  CXXFLAGS='-std=c++0x -O2 -fPIC -fno-strict-aliasing -w -DDUNE_GRID_EXPERIMENTAL_GRID_EXTENSIONS=1 -DDNDEBUG -DNDEBUG' \
+  --enable-experimental-grid-extensions \
+  --disable-documentation \
+  INKSCAPE=no \
+"
+CMAKE_FLAGS="-Wno-dev"
+BUILDDIR=build-clang-release
