@@ -1,0 +1,16 @@
+# This file is part of the dune-config-opts project:
+#   http://users.dune-project.org/projects/dune-config-opts
+# Copyright holders: Rene Milk, Felix Schindler
+# License: BSD 2-Clause License (http://opensource.org/licenses/BSD-2-Clause)
+
+CONFIGURE_FLAGS=" \
+  CC=clang \
+  CXX=clang++ \
+  F77=gfortran \
+  CXXFLAGS='-std=c++0x -g3 -ggdb -O0 -fPIC -fno-strict-aliasing -DDEBUG -DDUNE_GRID_EXPERIMENTAL_GRID_EXTENSIONS=1 -Wunused-variable -Winline -Wall -Wextra -Wc++0x-compat -Wparentheses -pedantic -Wredundant-decls -Wshadow -Wundef -Wnon-virtual-dtor -Wnon-literal-null-conversion -Wused-but-marked-unused -Wno-tautological-compare -Wfloat-equal -Wdisabled-macro-expansion -Wcovered-switch-default -Wswitch-enum -Wunreachable-code -Wshorten-64-to-32 -ftemplate-backtrace-limit=0' \
+  --enable-experimental-grid-extensions \
+  --disable-documentation \
+  INKSCAPE=no \
+"
+CMAKE_FLAGS="-Wno-dev"
+BUILDDIR=build-clang-debug
