@@ -13,4 +13,3 @@ CONFIGURE_FLAGS=" \
   INKSCAPE=no \
 "
 CMAKE_FLAGS="-Wno-dev"
-BUILDDIR=build-clang-debug
