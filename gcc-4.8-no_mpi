@@ -1,14 +1,11 @@
-# This file is part of the dune-hdd-demos project:
-#   http://users.dune-project.org/projects/dune-hdd-demos
-# Copyright holders: Felix Albrecht
-# License: BSD 2-Clause License (http://opensource.org/licenses/BSD-2-Clause)
-
-CONFIGURE_FLAGS=" \
+CONFIGURE_FLAGS="
   CC=gcc-4.8 \
   CXX=g++-4.8 \
-  F77=gfortran-4.8 \
+  F77=gfortran \
   CXXFLAGS='-DDEBUG -Og -g3 -ggdb -std=c++0x -fPIC -ftemplate-backtrace-limit=0 -Wextra -Wall -Wunused-variable -Wparentheses -pedantic -Wredundant-decls -Wshadow -Wundef -Wnon-virtual-dtor -Wno-tautological-compare -Wfloat-equal -Wswitch-enum -Wunreachable-code ' \
-  INKSCAPE=no \
-  --enable-experimental-grid-extensions \
+  --disable-parallel \
   --disable-documentation \
+  INKSCAPE=no \
 "
+
+CMAKE_FLAGS="-DBOOST_ROOT=../local -DBoost_NO_SYSTEM_PATHS=TRUE "
