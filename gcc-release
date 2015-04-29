@@ -10,6 +10,7 @@ CONFIGURE_FLAGS=" \
   CXXFLAGS='-std=c++11 -Os -fPIC -fno-strict-aliasing -w -DDUNE_GRID_EXPERIMENTAL_GRID_EXTENSIONS=1 -DDNDEBUG -DNDEBUG' \
   --enable-experimental-grid-extensions \
   --disable-documentation \
+  --enable-parallel \
   INKSCAPE=no \
 "
 CMAKE_FLAGS="-Wno-dev"
