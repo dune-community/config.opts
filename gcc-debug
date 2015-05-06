@@ -12,5 +12,5 @@ CONFIGURE_FLAGS=" \
   --disable-documentation \
   INKSCAPE=no \
 "
-CMAKE_FLAGS="-Wno-dev"
+CMAKE_FLAGS="-Wno-dev -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread'"
 BUILDDIR=build-gcc-debug
