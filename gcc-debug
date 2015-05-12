@@ -7,7 +7,7 @@ CONFIGURE_FLAGS=" \
   CC=gcc \
   CXX=g++ \
   F77=gfortran \
-  CXXFLAGS='-std=c++11 -g3 -ggdb -Og -fPIC -fno-strict-aliasing -DDEBUG -DDUNE_GRID_EXPERIMENTAL_GRID_EXTENSIONS=1 -DDUNE_FMatrix_WITH_CHECKING=1 -Wunused-variable -Winline -Wall -Wextra -Wc++0x-compat -Wparentheses -pedantic -Wredundant-decls -Wshadow -Wundef -Wnon-virtual-dtor -Wlogical-op -ftemplate-backtrace-limit=0' \
+  CXXFLAGS='-std=c++11 -g3 -ggdb -Og -fPIC -fno-strict-aliasing -DDEBUG -DDUNE_GRID_EXPERIMENTAL_GRID_EXTENSIONS=1 -DDUNE_FMatrix_WITH_CHECKING=1 -DDUNE_ISTL_WITH_CHECKING=1 -Wunused-variable -Winline -Wall -Wextra -Wc++0x-compat -Wparentheses -pedantic -Wredundant-decls -Wshadow -Wundef -Wnon-virtual-dtor -Wlogical-op -ftemplate-backtrace-limit=0' \
   --enable-experimental-grid-extensions \
   --disable-documentation \
   INKSCAPE=no \
