@@ -14,4 +14,4 @@ CONFIGURE_FLAGS=" \
   INKSCAPE=no \
 "
 CMAKE_FLAGS="-Wno-dev -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread'"
-BUILDDIR=build-gcc-release
+BUILDDIR=build-gcc-release-no-mpi
