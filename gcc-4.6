@@ -12,4 +12,4 @@ CONFIGURE_FLAGS=" \
   --enable-experimental-grid-extensions \
   --disable-documentation \
 "
-CMAKE_FLAGS="-Wno-dev -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread'"
+CMAKE_FLAGS="-Wno-dev -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread' -DUG_DIR=../local/lib/cmake/ug/"

@@ -13,5 +13,5 @@ CONFIGURE_FLAGS=" \
   --disable-parallel \
   INKSCAPE=no \
 "
-CMAKE_FLAGS="-Wno-dev"
+CMAKE_FLAGS="-Wno-dev -DUG_DIR=../local/lib/cmake/ug/"
 BUILDDIR=build-clang-debug

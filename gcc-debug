@@ -12,5 +12,5 @@ CONFIGURE_FLAGS=" \
   --disable-documentation \
   INKSCAPE=no \
 "
-CMAKE_FLAGS="-Wno-dev -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread'"
+CMAKE_FLAGS="-Wno-dev -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread' -DUG_DIR=../local/lib/cmake/ug/"
 BUILDDIR=build-gcc-debug

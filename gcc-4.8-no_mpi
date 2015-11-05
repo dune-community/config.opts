@@ -8,4 +8,4 @@ CONFIGURE_FLAGS="
   INKSCAPE=no \
 "
 
-CMAKE_FLAGS="-DBOOST_ROOT=../local -DBoost_NO_SYSTEM_PATHS=TRUE "
+CMAKE_FLAGS="-DBOOST_ROOT=../local -DBoost_NO_SYSTEM_PATHS=TRUE -DUG_DIR=../local/lib/cmake/ug/"
