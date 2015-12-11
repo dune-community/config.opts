@@ -1,7 +1,5 @@
 CONFIGURE_FLAGS="CXX=clang++ CC=clang F77=gfortran CXXFLAGS='-DDEBUG -g3 -ggdb -std=c++11  -O0 -DDUNE_GRID_EXPERIMENTAL_GRID_EXTENSIONS=1' \
   --enable-fieldvector-size-is-method \
-  --with-alugrid=/opt/dune/modules/alugrid/alugrid-1.52 \
-  --with-alberta=/opt/dune/modules/alberta/alberta-3.0 \
   --enable-dunedevel \
   --disable-parallel \
   --disable-documentation  INKSCAPE=no"
