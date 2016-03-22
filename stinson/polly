@@ -1,0 +1,7 @@
+CONFIGURE_FLAGS="CXX=pollycc CC=clang F77=gfortran CXXFLAGS='-DNDEBUG -std=c++11  -O3 -mllvm -polly' \
+  --enable-fieldvector-size-is-method \
+  --enable-dunedevel \
+  --disable-documentation  INKSCAPE=no"
+CMAKE_FLAGS=" -Wno-dev -DPETSC_DIR=/usr/lib/petsc -DPETSC_ARCH=linux-gnu-cxx-opt  -DCMAKE_BUILD_TYPE=RELEASE"
+#MAKE_FLAGS="-- -j4 -l4"
+BUILDDIR=/home/r_milk01/projekte/uni/dune/build/dune-multiscale/polly

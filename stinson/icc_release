@@ -1,0 +1,14 @@
+CONFIGURE_FLAGS="
+  CC=icc \
+  CXX=icc \
+  FC=ifort \
+  CXXFLAGS='-O3 -DNDEBUG -g3 -ipo -fno-alias -std=c++0x -w -DDUNE_STUFF_FUNCTIONS_DISABLE_CHECKS' \
+  --enable-parallel \
+  --disable-documentation \
+  INKSCAPE=no \
+"
+CMAKE_FLAGS=" -Wno-dev -DCMAKE_BUILD_TYPE=''  -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread'"
+MAKE_FLAGS="-- -j1 -l1"
+BUILDDIR=/home/r_milk01/projekte/uni/dune/build/dune-multiscale/icc-release
+
+# -Wdisabled-optimization -Wmissing-declarations -Wmissing-include-dirs

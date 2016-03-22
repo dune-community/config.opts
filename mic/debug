@@ -1,0 +1,27 @@
+CONFIGURE_FLAGS="
+  CC=/opt/intel/composer_xe_2015.3.187/bin/intel64_mic/icc \
+  CXX=/opt/intel/composer_xe_2015.3.187/bin/intel64_mic/icpc \
+  F77=/opt/intel/composer_xe_2015.3.187/bin/intel64_mic/ifort \
+  CXXFLAGS='-O0 -std=c++0x -w   -openmp -qopenmp -I/opt/intel/composer_xe_2015.3.187/mkl/include -mmic  \
+  -fexceptions -fPIC -D_GNU_SOURCE' \
+  LDFLAGS='-ltbb  /opt/intel/composer_xe_2015.3.187/mkl/lib/mic/libmkl_scalapack_lp64.a -Wl,--start-group /opt/intel/composer_xe_2015.3.187/mkl/lib/mic/libmkl_intel_lp64.a /opt/intel/composer_xe_2015.3.187/mkl/lib/mic/libmkl_core.a /opt/intel/composer_xe_2015.3.187/mkl/lib/mic/libmkl_intel_thread.a -Wl,--end-group /opt/intel/composer_xe_2015.3.187/mkl/lib/mic/libmkl_blacs_intelmpi_lp64.a -lpthread -lm' \
+  --enable-parallel \
+  --disable-documentation \
+  INKSCAPE=no \
+"
+CMAKE_FLAGS="--debug-output --debug-trycompile -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread' -Wno-dev \
+-DSTDTHREAD_WORKS=1 -DCMAKE_FIND_ROOT_PATH=/usr/linux-k1om-4.7 -DCMAKE_SYSTEM_NAME=Linux \
+    -DCMAKE_SYSTEM_PROCESSOR=k1om -DCMAKE_SYSTEM_VERSION=1 -D_CMAKE_TOOLCHAIN_PREFIX=x86_64-k1om-linux- \
+-DALIGNOF_DOUBLE=8 -DALIGNOF_FLOAT=4 -DALIGNOF_SIZE_T=8 -DALIGNOF_UINT32_T=4 -DALIGNOF_UINT64_T=8 \
+-DTHREADS_PTHREAD_ARG=-pthread \
+-DBOOST_ROOT=/home/r_milk01/fast_projekte/uni/dune/build/dune-multiscale/mic/local -DBoost_USE_STATIC_LIBS=TRUE \
+-DSUITESPARSE_INCLUDE_DIR_HINTS=/home/r_milk01/fast_projekte/uni/dune/build/dune-multiscale/mic/local/include \
+    -DSUITESPARSE_LIBRARY_DIR_HINTS=/home/r_milk01/fast_projekte/uni/dune/build/dune-multiscale/mic/local/lib \
+    -DSUITESPARSE_CHECK_LIBRARY_DIRS=/opt/mpss/3.5.2/sysroots/k1om-mpss-linux/usr/lib64/ \
+-DDUNE_USE_ONLY_STATIC_LIBS=ON -DTBB_EXTRA_COMPILE_OPTIONS='-mmic' \
+    -DBLAS_FOUND=TRUE -DUMFPACK_ROOT=/home/r_milk01/fast_projekte/uni/dune/build/dune-multiscale/mic/local \
+    -DBLAS_LIBRARIES='-Wl,--start-group /opt/intel/composer_xe_2015.3.187/mkl/lib/mic/libmkl_intel_lp64.a /opt/intel/composer_xe_2015.3.187/mkl/lib/mic/libmkl_core.a /opt/intel/composer_xe_2015.3.187/mkl/lib/mic/libmkl_intel_thread.a -Wl,--end-group' \
+    -DLAPACK_LIBRARIES=/opt/intel/composer_xe_2015.3.187/mkl/lib/mic/libmkl_scalapack_lp64.a \
+-DTBB_LIBRARIES=/opt/intel/composer_xe_2015.3.187/tbb/lib/mic/libtbb.so"
+BUILDDIR=/home/r_milk01/fast_projekte/uni/dune/build/dune-multiscale/mic
+#'

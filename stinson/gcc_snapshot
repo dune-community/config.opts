@@ -1,0 +1,10 @@
+CONFIGURE_FLAGS="
+  CC=/usr/lib/gcc-snapshot/bin/gcc \
+  CXX=/usr/lib/gcc-snapshot/bin/g++ \
+  F77=/usr/lib/gcc-snapshot/bin/gfortran \
+  CXXFLAGS='-fno-strict-aliasing -DDUNE_STUFF_FUNCTIONS_TO_LIB -DDEBUG -g3 -ggdb -std=c++0x -Wextra -Wall -DDUNE_GRID_EXPERIMENTAL_GRID_EXTENSIONS=1' \
+  --enable-parallel \
+  --disable-documentation  INKSCAPE=no"
+CMAKE_FLAGS="-Wno-dev -DCMAKE_BUILD_TYPE=DEBUG -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread'"
+#MAKE_FLAGS="-- -j4 -l4"
+BUILDDIR=/home/r_milk01/projekte/uni/dune/build/dune-multiscale/gcc-snapshot

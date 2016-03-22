@@ -1,0 +1,7 @@
+CONFIGURE_FLAGS="CXX=mpic++ CC=mpicc \
+  CXXFLAGS='-DNDEBUG -std=c++11 -O3 -g -w -DDUNE_STUFF_FUNCTIONS_DISABLE_CHECKS' \
+  --enable-parallel \
+  --disable-documentation  INKSCAPE=no"
+CMAKE_FLAGS="-GNinja -Wno-dev -DCMAKE_BUILD_TYPE='' -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread'"
+MAKE_FLAGS="-- -j4 -l4"
+BUILDDIR=/home/r_milk01/projekte/uni/dune/build/dune-multiscale/gcc-release

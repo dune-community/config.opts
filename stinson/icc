@@ -1,0 +1,13 @@
+CONFIGURE_FLAGS="
+  CC=icc \
+  CXX=icc \
+  FC=ifort \
+  CXXFLAGS='-O0 -DDEBUG -g3 -std=c++11' \
+  --enable-parallel \
+  --disable-documentation 
+"
+CMAKE_FLAGS=" -Wno-dev -DCMAKE_BUILD_TYPE=DEBUG "
+MAKE_FLAGS="-- -j2 -l2"
+
+BUILDDIR=/home/r_milk01/projekte/uni/dune/build/dune-multiscale/icc-debug
+# -Wdisabled-optimization -Wmissing-declarations -Wmissing-include-dirs
