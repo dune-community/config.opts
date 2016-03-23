@@ -10,9 +10,10 @@ addons:
     - cmake-data
 
 script:
-    - |
+    -|
     for i in $(git ls-files | \grep -Ev "README|.travis.yml") ; do
-        bash $i
+        echo "checking ${i}"
+        bash ${i}
     done
 
 notifications:
