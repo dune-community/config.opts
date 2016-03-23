@@ -5,4 +5,4 @@ CMAKE_FLAGS="-Wno-dev \
              -DENABLE_HEADERCHECK=1 \
              -DDISABLE_UBUNTU_WORKAROUND=1 \
              -DDUNE_PYTHON_INSTALL_USER=travis"
-MAKE_FLAGS="-j2 -l2"
+MAKE_FLAGS="-j1 -l1"
