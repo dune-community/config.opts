@@ -14,4 +14,4 @@ CONFIGURE_FLAGS=" \
   INKSCAPE=no \
 "
 CMAKE_FLAGS="-Wno-dev -DUG_DIR=../local/lib/cmake/ug/"
-BUILDDIR=build-clang-debug
+BUILDDIR=build-clang-debug-no-mpi
