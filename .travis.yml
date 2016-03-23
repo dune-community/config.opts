@@ -1,0 +1,25 @@
+language: python
+sudo: required
+dist: trusty
+
+addons:
+  apt:
+    sources: &commonsources
+    packages: &commonpackages
+    - cmake
+    - cmake-data
+
+script:
+    - |
+    for i in $(git ls-files | \grep -Ev "README|.travis.yml") ; do
+        bash $i
+    done
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
+
+branches:
+  except:
+    - gh-pages
