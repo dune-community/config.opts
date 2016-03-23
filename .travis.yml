@@ -14,11 +14,12 @@ before_script:
     - git clone --depth 1 https://github.com/wwu-numerik/dune-demos-bin.git local/bin
     - sudo -E apt-get build-dep libdune-common-2.2.1 -y
 script:
+    - set -e
     - |
         for i in $(git ls-files | \grep -Ev "README|.travis.yml") ; do
             echo "checking ${i}"
             bash ${i}
-            OPTS=${i} ${HOME}/local/bin/build_dune_modules.py
+            OPTS=${i} ./local/bin/build_dune_modules.py
         done
 
 notifications:
