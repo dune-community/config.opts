@@ -6,8 +6,8 @@ CONFIGURE_FLAGS="
   --enable-parallel \
   --disable-documentation 
 "
-CMAKE_FLAGS=" -Wno-dev -DCMAKE_BUILD_TYPE=DEBUG "
-MAKE_FLAGS="-- -j2 -l2"
+CMAKE_FLAGS="-GNinja -Wno-dev -DCMAKE_BUILD_TYPE=DEBUG "
+
 
 BUILDDIR=/home/r_milk01/projekte/uni/dune/build/dune-multiscale/icc-debug
 # -Wdisabled-optimization -Wmissing-declarations -Wmissing-include-dirs
