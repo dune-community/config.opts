@@ -2,6 +2,6 @@ CONFIGURE_FLAGS="CXX=clang++ CC=clang FC=/bin/false \
   CXXFLAGS=' -g3 -ggdb -std=c++11 -O2 -fsanitize=address' \
   --enable-parallel \
   --disable-documentation  INKSCAPE=no"
-CMAKE_FLAGS=" -Wno-dev -DCMAKE_BUILD_TYPE=DEBUG CMAKE_Fortran_COMPILER=/bin/false"
-#MAKE_FLAGS="-- -j4 -l4"
+CMAKE_FLAGS="-GNinja -Wno-dev -DCMAKE_BUILD_TYPE=DEBUG CMAKE_Fortran_COMPILER=/bin/false"
+
 BUILDDIR=/home/r_milk01/projekte/uni/dune/build/dune-multiscale/clang-sanity
