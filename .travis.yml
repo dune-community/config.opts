@@ -10,7 +10,7 @@ addons:
     - cmake-data
 
 before_script:
-    - git clone --branch ${DUNE_BRANCH} --depth 1 https://gitlab.dune-project.org/core/dune-common.git
+    - git clone --branch ${DUNE_BRANCH} https://gitlab.dune-project.org/core/dune-common.git
     - sudo -E apt-get build-dep libdune-common-2.2.1 -y
 script:
     - set -e
