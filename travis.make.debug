@@ -1,4 +1,4 @@
-if [ ${CC} == "clang" ] ; then
+if [[ ${CC} == *"clang"* ]] ; then
   TBB_CMAKE="-DTBB_DISABLE_FINAL_CHECK=1"
 else
   TBB_CMAKE=""
