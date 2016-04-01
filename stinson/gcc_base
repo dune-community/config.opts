@@ -4,4 +4,4 @@ F77=${F77:-gfortran}
 TYPE=${TYPE:-Debug}
 BUILDDIR="/home/r_milk01/projekte/uni/dune/build/dune-multiscale/${NAME}"
 CONFIGURE_FLAGS="CXX=${CXX} CC=${CC} F77=${F77} CXXFLAGS=${CXXFLAGS}"
-CMAKE_FLAGS="-GNinja -Wno-dev -DCMAKE_BUILD_TYPE=${TYPE} ${CMAKE_EXTRA} -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread'""
+CMAKE_FLAGS="-GNinja -Wno-dev -DCMAKE_BUILD_TYPE=${TYPE} ${CMAKE_EXTRA} -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread'"
