@@ -1,6 +1,0 @@
-CONFIGURE_FLAGS="CXX=g++ CC=gcc CXXFLAGS=' -DDEBUG -g3 -ggdb -std=c++0x -O0' \
-  --enable-parallel \
-  --disable-documentation  INKSCAPE=no"
-CMAKE_FLAGS="-GNinja -Wno-dev -DCMAKE_BUILD_TYPE=DEBUG -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread'"
-
-BUILDDIR=/home/r_milk01/projekte/uni/dune/build/dune-multiscale/gcc-debug
