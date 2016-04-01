@@ -1,7 +1,9 @@
-CONFIGURE_FLAGS="CXX=clang++ CC=clang FC=/bin/false \
-  CXXFLAGS=' -g3 -ggdb -std=c++11 -O2 -fsanitize=address' \
-  --enable-parallel \
-  --disable-documentation  INKSCAPE=no"
-CMAKE_FLAGS="-GNinja -Wno-dev -DCMAKE_BUILD_TYPE=DEBUG CMAKE_Fortran_COMPILER=/bin/false"
+DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
+NAME="$(basename ${BASH_SOURCE[0]})"
 
-BUILDDIR=/home/r_milk01/projekte/uni/dune/build/dune-multiscale/clang-sanity
+CXXFLAGS='-g3 -ggdb -std=c++11  -O2 -fsanitize=address' 
+F77=/bin/false
+CMAKE_EXTRA="-DCMAKE_Fortran_COMPILER=/bin/false"
+
+source ${DIR}/clang_base
+
