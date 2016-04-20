@@ -7,7 +7,7 @@ CONFIGURE_FLAGS=" \
   CC=gcc \
   CXX=g++ \
   F77=gfortran \
-  CXXFLAGS='-std=c++11 -Os -fPIC -fno-strict-aliasing -w -DDUNE_GRID_EXPERIMENTAL_GRID_EXTENSIONS=1 -DDNDEBUG -DNDEBUG' \
+  CXXFLAGS='-std=c++11 -Os -fPIC -fno-strict-aliasing -w -DDNDEBUG -DNDEBUG' \
   --enable-experimental-grid-extensions \
   --disable-documentation \
   --enable-parallel \
