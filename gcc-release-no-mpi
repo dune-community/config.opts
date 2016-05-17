@@ -7,7 +7,7 @@ CONFIGURE_FLAGS=" \
   CC=gcc \
   CXX=g++ \
   F77=gfortran \
-  CXXFLAGS='-std=c++11 -Os -fPIC -fno-strict-aliasing -w -DDNDEBUG -DNDEBUG -DENABLE_MPI=0 -DENABLE_PARMETIS=0 -DDUNE_GRID_EXPERIMENTAL_GRID_EXTENSIONS=1' \
+  CXXFLAGS='-std=c++11 -Os -fPIC -fno-strict-aliasing -ftemplate-backtrace-limit=0 -w -DDNDEBUG -DNDEBUG -DENABLE_MPI=0 -DENABLE_PARMETIS=0 -DDUNE_GRID_EXPERIMENTAL_GRID_EXTENSIONS=1' \
   --enable-experimental-grid-extensions \
   --disable-documentation \
   --disable-parallel \
