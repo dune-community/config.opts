@@ -10,6 +10,7 @@ CONFIGURE_FLAGS=" \
   CXXFLAGS='-std=c++0x -O2 -fPIC -fno-strict-aliasing -ftemplate-backtrace-limit=0 -w -DDNDEBUG -DNDEBUG -DDUNE_GRID_EXPERIMENTAL_GRID_EXTENSIONS=1' \
   --enable-experimental-grid-extensions \
   --disable-documentation \
+  --with-parmetis=/usr \
   INKSCAPE=no \
 "
 CMAKE_FLAGS="-Wno-dev -DUG_DIR=../local/lib/cmake/ug/"

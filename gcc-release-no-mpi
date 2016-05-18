@@ -11,6 +11,7 @@ CONFIGURE_FLAGS=" \
   --enable-experimental-grid-extensions \
   --disable-documentation \
   --disable-parallel \
+  --with-parmetis=/usr \
   INKSCAPE=no \
 "
 CMAKE_FLAGS="-Wno-dev -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread' -DUG_DIR=../local/lib/cmake/ug/"

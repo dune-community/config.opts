@@ -10,6 +10,7 @@ CONFIGURE_FLAGS=" \
   CXXFLAGS='-std=c++11 -g3 -ggdb -Og -fPIC -fno-strict-aliasing -DDEBUG -DDUNE_FMatrix_WITH_CHECKING=1 -DDUNE_ISTL_WITH_CHECKING=1 -DDUNE_GRID_EXPERIMENTAL_GRID_EXTENSIONS=1 -Wunused-variable -Winline -Wall -Wextra -Wc++0x-compat -Wparentheses -pedantic -Wredundant-decls -Wshadow -Wundef -Wnon-virtual-dtor -Wlogical-op -ftemplate-backtrace-limit=0' \
   --enable-experimental-grid-extensions \
   --disable-documentation \
+  --with-parmetis=/usr \
   INKSCAPE=no \
 "
 CMAKE_FLAGS="-Wno-dev -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread' -DUG_DIR=../local/lib/cmake/ug/"
