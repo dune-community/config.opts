@@ -6,7 +6,5 @@ CONFIGURE_FLAGS="
   --enable-parallel \
   INKSCAPE=no \
 "
-CMAKE_FLAGS="-Wno-dev -DUMFPACK_ROOT=/home/r/r_milk01/local -DMETIS_ROOT=/home/r/r_milk01/projekte/uni/dune/cmake_multiscale/local -DMETIS_INCLUDE_DIR=/home/r/r_milk01/projekte/uni/dune/cmake_multiscale/local/include  -DPARMETIS_ROOT=/home/r/r_milk01/projekte/uni/dune/cmake_multiscale/local -DPARMETIS_INCLUDE_DIR=/home/r/r_milk01/projekte/uni/dune/cmake_multiscale/local/include -DEIGEN3_INCLUDE_DIR=/home/r/r_milk01/projekte/uni/dune/cmake_multiscale/local/include/eigen3  -DBLAS_LIBRARIES=/home/r/r_milk01/local/lib/libblas.a -DBOOST_ROOT=/home/r/r_milk01/projekte/uni/dune/cmake_multiscale/local -DBoost_NO_SYSTEM_PATHS=TRUE -DCMAKE_BUILD_TYPE=DEBUG -DUMFPACK_DUNE_LIBRARIES='/home/r/r_milk01/local/lib/libumfpack.a /home/r/r_milk01/local/lib/libblas.a /home/r/r_milk01/local/lib/libamd.a /home/r/r_milk01/local/lib/libcholmod.a /home/r/r_milk01/local/lib/libsuitesparseconfig.a /Applic.PALMA/compiler/gcc/4.8.2/lib64/libgfortran.a /home/r/r_milk01/local/lib/libcolamd.a'"
-#MAKE_FLAGS="-- -j 12"
-#BUILDDIR=/scratch/tmp/r_milk01/build/
-BUILDDIR=build-gcc-thread-debug
+NAME="$(basename ${BASH_SOURCE[0]})"
+source ${DIR}/palma_common
