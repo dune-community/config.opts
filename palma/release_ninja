@@ -1,0 +1,23 @@
+DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
+CONFIGURE_FLAGS="
+  CC=gcc \
+  CXX=g++ \
+  F77=gfortran \
+  CXXFLAGS='-g -std=c++11 -DDUNE_STUFF_FUNCTIONS_DISABLE_CHECKS \
+-funroll-loops -m64 -mfpmath=sse -falign-loops -mtune=native -march=native -pipe -fomit-frame-pointer -O4 \
+  -funroll-loops \
+  -ffast-math -fomit-frame-pointer -msse3 -mfpmath=sse \
+  -w -Wfatal-errors \
+  -DNDEBUG \
+    --param large-unit-insns=1000 \
+    --param inline-unit-growth=1000 \
+    --param max-inline-insns-single=1000 \
+    --param large-function-growth=1000 \
+    --param large-function-insns=1000'\
+  --disable-documentation \
+  --enable-parallel \
+  INKSCAPE=no \
+"
+NAME="$(basename ${BASH_SOURCE[0]})"
+source ${DIR}/palma_common
+CMAKE_FLAGS="-GNinja -Wno-dev ${CMAKE_FLAGS}"
