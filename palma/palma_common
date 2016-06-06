@@ -1,5 +1,5 @@
 
-CMAKE_FLAGS="-Wno-dev -DUMFPACK_ROOT=/home/r/r_milk01/local -DBLAS_LIBRARIES=/home/r/r_milk01/local/lib/libblas.a -DCMAKE_BUILD_TYPE='RELEASE' -DBoost_NO_SYSTEM_PATHS=TRUE -DBOOST_ROOT=/Applic.PALMA/software/Boost/boost_1_55_0 -DSUITESPARSE_INCLUDE_DIR_HINTS=/home/r/r_milk01/local/include/ -DSUITESPARSE_LIBRARY_DIR_HINTS=/home/r/r_milk01/local/lib/"
+CMAKE_FLAGS="-Wno-dev -DUMFPACK_ROOT=${HOME}/local -DCMAKE_BUILD_TYPE='RELEASE' -DSUITESPARSE_INCLUDE_DIR_HINTS=${HOME}/local/include/ -DSUITESPARSE_LIBRARY_DIR_HINTS=${HOME}/local/lib/"
 BDIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; cd ../../ ; pwd -P )"
 MAKE_FLAGS="-- -j 12"
-BUILDDIR=/scratch/tmp/r_milk01/$(basename ${BDIR})/${NAME}
+BUILDDIR=/scratch_gss/tmp/${USER}/$(basename ${BDIR})/${NAME}

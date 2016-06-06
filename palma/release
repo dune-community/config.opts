@@ -3,7 +3,7 @@ CONFIGURE_FLAGS="
   CC=gcc \
   CXX=g++ \
   F77=gfortran \
-  CXXFLAGS='-DDEBUG -g -std=c++11 -DDUNE_STUFF_FUNCTIONS_DISABLE_CHECKS \
+  CXXFLAGS='-g -std=c++11 -DDUNE_STUFF_FUNCTIONS_DISABLE_CHECKS \
 -funroll-loops -m64 -mfpmath=sse -falign-loops -mtune=native -march=native -pipe -fomit-frame-pointer -O4 \
   -funroll-loops \
   -ffast-math -fomit-frame-pointer -msse3 -mfpmath=sse \
