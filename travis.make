@@ -1,12 +1,3 @@
-if [[ ${CC} == *"clang"* ]] ; then
-  TBB_CMAKE="-DTBB_DISABLE_FINAL_CHECK=1"
-else
-  TBB_CMAKE=""
-fi
+DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ;  pwd -P )"
+source ${DIR}/travis.common
 
-CMAKE_FLAGS="-Wno-dev ${TBB_CMAKE} -DCMAKE_INSTALL_PREFIX=$HOME/dune -DCMAKE_BUILD_TYPE=DEBUG \
-    -DCMAKE_CXX_FLAGS='-DDEBUG -g3 -ggdb -std=c++11  -O2 -w -fprofile-arcs -ftest-coverage' \
-    -DENABLE_HEADERCHECK=1 -DDISABLE_UBUNTU_WORKAROUND=1 -DDUNE_PYTHON_INSTALL_USER=travis \
-    -DPDELAB_DISABLE_CXX_VERSION_CHECK=1 "
-
-MAKE_FLAGS="-j2 -l2"
