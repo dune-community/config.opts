@@ -4,6 +4,7 @@ else
   TBB_CMAKE=""
 fi
 
+OPT=${OPT:--O2}
 
 CMAKE_FLAGS="\
   -Wno-dev \
@@ -16,7 +17,7 @@ CMAKE_FLAGS="\
       -g3 \
       -ggdb \
       -std=c++11  \
-      -O2 \
+      ${OPT} \
       -w \
       -fprofile-arcs \
       -coverage \
@@ -25,3 +26,4 @@ CMAKE_FLAGS="\
     -DDISABLE_UBUNTU_WORKAROUND=1 \
     -DDUNE_PYTHON_INSTALL_USER=travis \
     -DPDELAB_DISABLE_CXX_VERSION_CHECK=1 "
+
