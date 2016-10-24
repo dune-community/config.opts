@@ -20,6 +20,7 @@ CMAKE_FLAGS="\
       ${OPT} \
       -w \
       -fprofile-arcs \
+      -fPIC \
       -coverage \
       -ftest-coverage' \
     -DENABLE_HEADERCHECK=1 \
