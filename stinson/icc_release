@@ -2,7 +2,7 @@ CONFIGURE_FLAGS="
   CC=icc \
   CXX=icc \
   FC=ifort \
-  CXXFLAGS='-O3 -DNDEBUG -g3 -ipo -fno-alias -std=c++0x -w -DDUNE_STUFF_FUNCTIONS_DISABLE_CHECKS' \
+  CXXFLAGS='-O3 -DNDEBUG -g3 -ipo -fno-alias -std=c++0x -w' \
   --enable-parallel \
   --disable-documentation \
   INKSCAPE=no \

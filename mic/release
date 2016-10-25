@@ -2,7 +2,7 @@ CONFIGURE_FLAGS="
   CC=/opt/intel/composer_xe_2015.3.187/bin/intel64_mic/icc \
   CXX=/opt/intel/composer_xe_2015.3.187/bin/intel64_mic/icpc \
   F77=/opt/intel/composer_xe_2015.3.187/bin/intel64_mic/ifort \
-  CXXFLAGS='-O4  -DDUNE_STUFF_FUNCTIONS_DISABLE_CHECKS -ipo -std=c++11 -w   -openmp -qopenmp -I/opt/intel/composer_xe_2015.3.187/mkl/include -mmic  \
+  CXXFLAGS='-O4  -ipo -std=c++11 -w   -openmp -qopenmp -I/opt/intel/composer_xe_2015.3.187/mkl/include -mmic  \
   -fexceptions -fPIC -D_GNU_SOURCE -vecreport3 -mkl ' \
   LDFLAGS='-ltbb  /opt/intel/composer_xe_2015.3.187/mkl//lib/mic/libmkl_scalapack_lp64.a -Wl,--start-group /opt/intel/composer_xe_2015.3.187/mkl//lib/mic/libmkl_intel_lp64.a /opt/intel/composer_xe_2015.3.187/mkl//lib/mic/libmkl_core.a /opt/intel/composer_xe_2015.3.187/mkl//lib/mic/libmkl_sequential.a -Wl,--end-group /opt/intel/composer_xe_2015.3.187/mkl//lib/mic/libmkl_blacs_intelmpi_lp64.a -lpthread -lm' \
   --enable-parallel \

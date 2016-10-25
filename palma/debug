@@ -4,7 +4,7 @@ source ${DIR}/palma_common
 CONFIGURE_FLAGS="
   CC=icc \
   CXX=icc \
-  CXXFLAGS='-DDEBUG -g -O3 -std=c++0x -DDUNE_STUFF_FUNCTIONS_DISABLE_CHECKS -fno-omit-frame-pointer -fsanitize=address' \
+  CXXFLAGS='-DDEBUG -g -O3 -std=c++0x -fno-omit-frame-pointer -fsanitize=address' \
   --disable-documentation \
   --enable-parallel \
   INKSCAPE=no \

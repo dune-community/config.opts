@@ -1,7 +1,7 @@
 DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
 NAME="$(basename ${BASH_SOURCE[0]})"
 
-CXXFLAGS="'-DNDEBUG -std=c++11 -O3 -g -w -DDUNE_STUFF_FUNCTIONS_DISABLE_CHECKS -funroll-loops -m64 -mfpmath=sse -falign-loops -mtune=native -march=native  -pipe -fomit-frame-pointer -O4 '" 
+CXXFLAGS="'-DNDEBUG -std=c++11 -O3 -g -w -funroll-loops -m64 -mfpmath=sse -falign-loops -mtune=native -march=native  -pipe -fomit-frame-pointer -O4 '" 
 
 TYPE=RelWithDebInfo
 

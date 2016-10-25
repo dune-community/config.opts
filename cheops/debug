@@ -1,5 +1,5 @@
 CONFIGURE_FLAGS="CXX=mpic++ CC=mpicc \
-  CXXFLAGS='-DNDEBUG -std=c++11 -O3 -g -w -DDUNE_STUFF_FUNCTIONS_DISABLE_CHECKS -funroll-loops -m64 -mfpmath=sse -falign-loops -mtune=native -march=native -pipe -fomit-frame-pointer -O4 -g -fsanitize=address' \
+  CXXFLAGS='-DNDEBUG -std=c++11 -O3 -g -w -funroll-loops -m64 -mfpmath=sse -falign-loops -mtune=native -march=native -pipe -fomit-frame-pointer -O4 -g -fsanitize=address' \
   LDFLAGS='-lmkl_intel_lp64 -lmkl_gnu_thread -lmkl_core -liomp5 -lpthread -lgfortran' \
   --enable-parallel \
   --with-parmetis=/home/skaulman/local \ 
