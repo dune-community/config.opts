@@ -3,3 +3,4 @@ TYPE=${TYPE:-Debug}
 BDIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; cd ../../ ; pwd -P )"
 BUILDDIR=/home/r_milk01/projekte/uni/dune/build/$(basename ${BDIR})/${NAME}
 
+CMAKE_EXTRA="-DDXT_TEST_PROCS=4 "
