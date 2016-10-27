@@ -1,13 +1,5 @@
-CONFIGURE_FLAGS="
-  CC=icc \
-  CXX=icc \
-  FC=ifort \
-  CXXFLAGS='-O0 -DDEBUG -g3 -std=c++11' \
-  --enable-parallel \
-  --disable-documentation 
-"
-CMAKE_FLAGS="-GNinja -Wno-dev -DCMAKE_BUILD_TYPE=DEBUG "
-
-
-BUILDDIR=/home/r_milk01/projekte/uni/dune/build/dune-multiscale/icc-debug
-# -Wdisabled-optimization -Wmissing-declarations -Wmissing-include-dirs
+DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
+NAME="$(basename ${BASH_SOURCE[0]})"
+CXXFLAGS="'-DNDEBUG -std=c++11 -O0 -g -m64 -pipe -gxx-name=g++-4.9 -gcc-name=gcc-4.9'"
+TYPE=RelWithDebInfo
+source ${DIR}/icc_base
