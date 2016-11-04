@@ -22,9 +22,8 @@ CMAKE_FLAGS="\
       -fprofile-arcs \
       -fPIC \
       -coverage \
-      -ftest-coverage' \
-    -DENABLE_HEADERCHECK=1
-    -DDXT_DISABLE_LARGE_TESTS=1 \
+      -ftest-coverage -DDXT_DISABLE_LARGE_TESTS=1' \
+    -DENABLE_HEADERCHECK=1 \
     -DDISABLE_UBUNTU_WORKAROUND=1 \
     -DDUNE_PYTHON_INSTALL_USER=travis \
     -DPDELAB_DISABLE_CXX_VERSION_CHECK=1 "
