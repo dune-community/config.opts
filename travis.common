@@ -4,7 +4,7 @@ else
   TBB_CMAKE=""
 fi
 
-OPT=${OPT:--O2}
+OPT=${OPT:--O0}
 
 CMAKE_FLAGS="\
   -Wno-dev \
