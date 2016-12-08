@@ -4,5 +4,5 @@ DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ;  pwd -P )"
 CXX=${CXX:-g++}
 CC=${CC:-gcc} 
 CONFIGURE_FLAGS="CXX=${CXX} CC=${CC} F77=${F77} CXXFLAGS=${CXXFLAGS}"
-CMAKE_FLAGS="-GNinja -Wno-dev -DCMAKE_BUILD_TYPE=${TYPE} ${CMAKE_EXTRA} -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread'"
+CMAKE_FLAGS="-Wno-dev -DCMAKE_BUILD_TYPE=${TYPE} ${CMAKE_EXTRA} -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread'"
 
