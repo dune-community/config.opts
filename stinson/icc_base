@@ -2,8 +2,8 @@ DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ;  pwd -P )"
 . ${DIR}/stinson_common
 
 CXX=${CXX:-icpc}
-CC=${CC:-icc} 
-CONFIGURE_FLAGS="CXX=${CXX} CC=${CC} F77=${F77} CXXFLAGS=${CXXFLAGS}"
+CC=${CC:-icc}
+CONFIGURE_FLAGS="CXX=${CXX} CC=${CC} F77=${F77} CXXFLAGS=${CXXFLAGS} --with-boost-libdir=/usr/lib/x86_64-linux-gnu "
 CMAKE_FLAGS="-DDISABLE_CXX_VERSION_CHECK=1 -DCXX_MAX_SUPPORTED_STANDARD=11 -GNinja -Wno-dev -DCMAKE_BUILD_TYPE=${TYPE} ${CMAKE_EXTRA} -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread'"
 
 
