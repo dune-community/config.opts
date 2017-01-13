@@ -14,4 +14,4 @@ CONFIGURE_FLAGS=" \
   INKSCAPE=no \
 "
 CMAKE_FLAGS="-GNinja -Wno-dev -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread'"
-BUILDDIR=build-gcc-debug
+BUILDDIR=build-gcc-debug.ninja
