@@ -1,0 +1,15 @@
+# This file is part of the dune-config-opts project:
+#   http://users.dune-project.org/projects/dune-config-opts
+# Copyright holders: Rene Milk, Felix Schindler
+# License: BSD 2-Clause License (http://opensource.org/licenses/BSD-2-Clause)
+
+CONFIGURE_FLAGS=" \
+  CC=gcc \
+  CXX=g++ \
+  F77=gfortran \
+  CXXFLAGS='-std=c++14 -Og -fPIC -fno-strict-aliasing -ftemplate-backtrace-limit=0 -w' \
+  INKSCAPE=no \
+"
+CMAKE_FLAGS="-GNinja -Wno-dev -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread' -DCMAKE_DISABLE_FIND_PACKAGE_PETSc=TRUE -DCMAKE_DISABLE_FIND_PACKAGE_ParMETIS=True"
+BUILDDIR=build-gcc-rel-with-deb-info.ninja
+
