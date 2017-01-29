@@ -8,10 +8,8 @@ CONFIGURE_FLAGS=" \
   CXX=clang++ \
   F77=gfortran \
   CXXFLAGS='-std=c++0x -g3 -ggdb -O0 -fPIC -fno-strict-aliasing -DDEBUG -DDUNE_FMatrix_WITH_CHECKING=1 -DDUNE_ISTL_WITH_CHECKING=1 -Wunused-variable -Winline -Wall -Wextra -Wc++0x-compat -Wparentheses -pedantic -Wredundant-decls -Wshadow -Wundef -Wnon-virtual-dtor -Wnon-literal-null-conversion -Wused-but-marked-unused -Wno-tautological-compare -Wfloat-equal -Wdisabled-macro-expansion -Wcovered-switch-default -Wswitch-enum -Wunreachable-code -Wshorten-64-to-32 -ftemplate-backtrace-limit=0' \
-  --enable-experimental-grid-extensions \
-  --disable-documentation \
-  --with-parmetis=/usr \
   INKSCAPE=no \
 "
 CMAKE_FLAGS="-GNinja -Wno-dev -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread' -DCMAKE_DISABLE_FIND_PACKAGE_PETSc=TRUE -DCMAKE_DISABLE_FIND_PACKAGE_ParMETIS=True"
 BUILDDIR=build-clang-debug.ninja
+

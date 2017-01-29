@@ -8,10 +8,8 @@ CONFIGURE_FLAGS=" \
   CXX=g++ \
   F77=gfortran \
   CXXFLAGS='-std=c++11 -g3 -ggdb -Og -fPIC -fno-strict-aliasing -DDEBUG -DDUNE_FMatrix_WITH_CHECKING=1 -DDUNE_ISTL_WITH_CHECKING=1 -Wunused-variable -Wall -Wextra -Wc++0x-compat -Wparentheses -pedantic -Wredundant-decls -Wshadow -Wundef -Wnon-virtual-dtor -Wlogical-op -ftemplate-backtrace-limit=0' \
-  --enable-experimental-grid-extensions \
-  --disable-documentation \
-  --with-parmetis=/usr \
   INKSCAPE=no \
 "
 CMAKE_FLAGS="-Wno-dev -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread' -DCMAKE_DISABLE_FIND_PACKAGE_PETSc=TRUE -DCMAKE_DISABLE_FIND_PACKAGE_ParMETIS=True"
 BUILDDIR=build-gcc-debug
+

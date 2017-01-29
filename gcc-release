@@ -8,11 +8,8 @@ CONFIGURE_FLAGS=" \
   CXX=g++ \
   F77=gfortran \
   CXXFLAGS='-std=c++11 -Os -fPIC -fno-strict-aliasing -ftemplate-backtrace-limit=0 -w -DDNDEBUG -DNDEBUG' \
-  --enable-experimental-grid-extensions \
-  --disable-documentation \
-  --enable-parallel \
-  --with-parmetis=/usr \
   INKSCAPE=no \
 "
-CMAKE_FLAGS="-Wno-dev -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread' -DCMAKE_DISABLE_FIND_PACKAGE_PETSc=TRUE"
+CMAKE_FLAGS="-Wno-dev -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread' -DCMAKE_DISABLE_FIND_PACKAGE_PETSc=TRUE -DCMAKE_DISABLE_FIND_PACKAGE_ParMETIS=True"
 BUILDDIR=build-gcc-release
+
