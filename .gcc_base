@@ -1,0 +1,16 @@
+# This file is part of the dune-config-opts project:
+#   http://users.dune-project.org/projects/dune-config-opts
+# Copyright holders: Rene Milk, Felix Schindler
+# License: BSD 2-Clause License (http://opensource.org/licenses/BSD-2-Clause)
+
+DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ;  pwd -P )"
+F77=${F77:-gfortran}
+TYPE=${TYPE:-Debug}
+BDIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; cd ../../ ; pwd -P )"
+BUILDDIR="${BDIR}/build/${NAME}"
+
+CXX=${CXX:-g++}
+CC=${CC:-gcc}
+F77=${F77:-gfortran}
+CMAKE_FLAGS="-DCMAKE_BUILD_TYPE=${TYPE} -DDUNE_FORCE_PYTHON3=TRUE -DDXT_TEST_PROCS=4 -DCMAKE_DISABLE_FIND_PACKAGE_PETSc=TRUE -DCMAKE_DISABLE_FIND_PACKAGE_ParMETIS=True  -Wno-dev  ${CMAKE_EXTRA} ${CONFIGURE_FLAGS} -DCMAKE_CXX_COMPILER=${CXX} -DCMAKE_C_COMPILER=${CC}  -DCMAKE_CXX_FLAGS=${CXXFLAGS}"
+
