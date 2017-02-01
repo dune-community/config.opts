@@ -6,7 +6,7 @@
 DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
 NAME="$(basename ${BASH_SOURCE[0]})"
 
-CXXFLAGS="'-std=c++11 -Os -fPIC -fno-strict-aliasing -ftemplate-backtrace-limit=0 -w -DDNDEBUG -DNDEBUG'"
+source ${DIR}/gcc-release
 CMAKE_EXTRA='-GNinja'
 
 source ${DIR}/.gcc_base
