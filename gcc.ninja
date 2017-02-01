@@ -1,12 +1,1 @@
-# This file is part of the dune-config-opts project:
-#   http://users.dune-project.org/projects/dune-config-opts
-# Copyright holders: Rene Milk, Felix Schindler
-# License: BSD 2-Clause License (http://opensource.org/licenses/BSD-2-Clause)
-
-DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
-NAME="$(basename ${BASH_SOURCE[0]})"
-
-CXXFLAGS="'-std=c++11 -Os -fPIC -fno-strict-aliasing -ftemplate-backtrace-limit=0 -w -DDNDEBUG -DNDEBUG'"
-CMAKE_EXTRA='-GNinja'
-
-source ${DIR}/.gcc_base
+gcc-release.ninja
