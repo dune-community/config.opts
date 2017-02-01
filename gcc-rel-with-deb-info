@@ -8,4 +8,4 @@ NAME="$(basename ${BASH_SOURCE[0]})"
 
 CXXFLAGS="'-std=c++14 -Og -fPIC -fno-strict-aliasing -ftemplate-backtrace-limit=0 -w'"
 
-source ${DIR}/..gcc_base
+source ${DIR}/.gcc_base

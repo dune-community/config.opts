@@ -12,4 +12,4 @@ NAME="$(basename ${BASH_SOURCE[0]})"
 
 CXXFLAGS="'-DDXT_DISABLE_LARGE_TESTS=1 -DDEBUG -Og -g3 -ggdb -std=c++0x -fPIC -ftemplate-backtrace-limit=0 -Wextra -Wall -Wunused-variable -Wparentheses -pedantic -Wredundant-decls -Wshadow -Wundef -Wnon-virtual-dtor -Wfloat-equal -Wswitch-enum -Wunreachable-code'"
 
-source ${DIR}/..gcc_base
+source ${DIR}/.gcc_base
