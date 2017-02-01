@@ -3,14 +3,10 @@
 # Copyright holders: Rene Milk, Felix Schindler
 # License: BSD 2-Clause License (http://opensource.org/licenses/BSD-2-Clause)
 
-CONFIGURE_FLAGS=" \
-  CC=clang \
-  CXX=clang++ \
-  F77=gfortran \
-  CXXFLAGS='-std=c++0x -g3 -ggdb -O0 -fPIC -fno-strict-aliasing -fsanitize=address -fno-optimize-sibling-calls -fno-omit-frame-pointer -DDEBUG -DDUNE_FMatrix_WITH_CHECKING=1 -Wunused-variable -Winline -Wall -Wextra -Wc++0x-compat -Wparentheses -pedantic -Wredundant-decls -Wshadow -Wundef -Wnon-virtual-dtor -Wnon-literal-null-conversion -Wused-but-marked-unused -Wno-tautological-compare -Wfloat-equal -Wdisabled-macro-expansion -Wcovered-switch-default -Wswitch-enum -Wunreachable-code -Wshorten-64-to-32 -ftemplate-backtrace-limit=0' \
-  --enable-experimental-grid-extensions \
-  --disable-documentation \
-  INKSCAPE=no \
-"
-CMAKE_FLAGS="-Wno-dev -DCMAKE_DISABLE_FIND_PACKAGE_PETSc=TRUE"
-BUILDDIR=build-clang-sanitizer
+DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
+NAME="$(basename ${BASH_SOURCE[0]})"
+
+TYPE=RelWithDebInfo
+CXXFLAGS="-g3 -ggdb -O0 -fno-strict-aliasing -fsanitize=address -fno-optimize-sibling-calls -fno-omit-frame-pointer -DDEBUG -DDUNE_FMatrix_WITH_CHECKING=1 -Wunused-variable -Winline -Wall -Wextra -Wc++0x-compat -Wparentheses -pedantic -Wredundant-decls -Wshadow -Wundef -Wnon-virtual-dtor -Wnon-literal-null-conversion -Wused-but-marked-unused -Wno-tautological-compare -Wfloat-equal -Wdisabled-macro-expansion -Wcovered-switch-default -Wswitch-enum -Wunreachable-code -Wshorten-64-to-32"
+
+source ${DIR}/.clang_base

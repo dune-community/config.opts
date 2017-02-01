@@ -3,13 +3,10 @@
 # Copyright holders: Rene Milk, Felix Schindler
 # License: BSD 2-Clause License (http://opensource.org/licenses/BSD-2-Clause)
 
-CONFIGURE_FLAGS=" \
-  CC=clang \
-  CXX=clang++ \
-  F77=gfortran \
-  CXXFLAGS='-std=c++0x -O2 -fPIC -fno-strict-aliasing -ftemplate-backtrace-limit=0 -w -DDNDEBUG -DNDEBUG' \
-  INKSCAPE=no \
-"
-CMAKE_FLAGS="-GNinja -Wno-dev -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread' -DCMAKE_DISABLE_FIND_PACKAGE_PETSc=TRUE -DCMAKE_DISABLE_FIND_PACKAGE_ParMETIS=True"
-BUILDDIR=build-clang-release.ninja
+DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
+NAME="$(basename ${BASH_SOURCE[0]})"
 
+source ${DIR}/clang-release
+CMAKE_EXTRA='-GNinja'
+
+source ${DIR}/.clang_base
