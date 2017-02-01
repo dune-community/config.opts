@@ -9,4 +9,4 @@ NAME="$(basename ${BASH_SOURCE[0]})"
 CXXFLAGS="'-std=c++11 -Os -fPIC -fno-strict-aliasing -ftemplate-backtrace-limit=0 -w -DDNDEBUG -DNDEBUG'"
 CMAKE_EXTRA='-GNinja'
 
-source ${DIR}.gcc_base
+source ${DIR}/.gcc_base
