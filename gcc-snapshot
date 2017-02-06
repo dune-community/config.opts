@@ -3,14 +3,13 @@
 # Copyright holders: Felix Albrecht
 # License: BSD 2-Clause License (http://opensource.org/licenses/BSD-2-Clause)
 
-CONFIGURE_FLAGS=" \
-  CC=/usr/lib/gcc-snapshot/bin/gcc \
-  CXX=/usr/lib/gcc-snapshot/bin/g++ \
-  F77=/usr/lib/gcc-snapshot/bin/gfortran \
-  CXXFLAGS='-DDXT_DISABLE_LARGE_TESTS=1 -DDEBUG -Og -g3 -ggdb -std=c++0x -fPIC -ftemplate-backtrace-limit=0 -Wextra -Wall -Wunused-variable -Wparentheses -pedantic -Wredundant-decls -Wshadow -Wundef -Wnon-virtual-dtor -Wfloat-equal -Wswitch-enum -Wunreachable-code' \
-  INKSCAPE=no \
-"
+CC=/usr/lib/gcc-snapshot/bin/gcc
+CXX=/usr/lib/gcc-snapshot/bin/g++
+F77=/usr/lib/gcc-snapshot/bin/gfortran
 
-CMAKE_FLAGS="-Wno-dev -DSTDTHREAD_LINK_FLAGS='-lpthread -pthread' -DCMAKE_DISABLE_FIND_PACKAGE_PETSc=TRUE -DCMAKE_DISABLE_FIND_PACKAGE_ParMETIS=True"
-BUILDDIR=build-gcc-snapshot
+DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
+NAME="$(basename ${BASH_SOURCE[0]})"
 
+CXXFLAGS="-DDXT_DISABLE_LARGE_TESTS=1 -DDEBUG -Og -g3 -ggdb -Wextra -Wall -Wunused-variable -Wparentheses -pedantic -Wredundant-decls -Wshadow -Wundef -Wnon-virtual-dtor -Wfloat-equal -Wswitch-enum -Wunreachable-code"
+
+source ${DIR}/base/gcc

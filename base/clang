@@ -3,10 +3,10 @@
 # Copyright holders: Rene Milk, Felix Schindler
 # License: BSD 2-Clause License (http://opensource.org/licenses/BSD-2-Clause)
 
-DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
-NAME="$(basename ${BASH_SOURCE[0]})"
+DIR="$(cd "$(dirname ${BASH_SOURCE[0]})/.." ;  pwd -P )"
 
-TYPE=RelWithDebInfo
-CXXFLAGS="-Os -w -DDNDEBUG -DNDEBUG"
+CXX=${CXX:-clang++}
+CC=${CC:-clang}
+F77=${F77:-gfortran}
 
-source ${DIR}/base/gcc
+source ${DIR}/base/common
