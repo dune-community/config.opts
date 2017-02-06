@@ -9,4 +9,4 @@ NAME="$(basename ${BASH_SOURCE[0]})"
 source ${DIR}/gcc-release
 CMAKE_EXTRA='-GNinja'
 
-source ${DIR}/.gcc_base
+source ${DIR}/base/gcc

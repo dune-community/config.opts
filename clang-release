@@ -9,4 +9,4 @@ NAME="$(basename ${BASH_SOURCE[0]})"
 TYPE=RelWithDebInfo
 CXXFLAGS="-O2 -w -DDNDEBUG -DNDEBUG"
 
-source ${DIR}/.clang_base
+source ${DIR}/base/clang

@@ -3,10 +3,10 @@
 # Copyright holders: Rene Milk, Felix Schindler
 # License: BSD 2-Clause License (http://opensource.org/licenses/BSD-2-Clause)
 
-DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ;  pwd -P )"
+DIR="$(cd "$(dirname ${BASH_SOURCE[0]})/.." ;  pwd -P )"
 
 CXX=${CXX:-g++}
 CC=${CC:-gcc}
 F77=${F77:-gfortran}
 
-source ${DIR}/.common_base
+source ${DIR}/base/common

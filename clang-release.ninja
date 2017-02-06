@@ -9,4 +9,4 @@ NAME="$(basename ${BASH_SOURCE[0]})"
 source ${DIR}/clang-release
 CMAKE_EXTRA='-GNinja'
 
-source ${DIR}/.clang_base
+source ${DIR}/base/clang

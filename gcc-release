@@ -9,4 +9,4 @@ NAME="$(basename ${BASH_SOURCE[0]})"
 TYPE=RelWithDebInfo
 CXXFLAGS="-Os -w -DDNDEBUG -DNDEBUG"
 
-source ${DIR}/.gcc_base
+source ${DIR}/base/gcc
