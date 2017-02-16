@@ -5,8 +5,8 @@
 
 DIR="$(cd "$(dirname ${BASH_SOURCE[0]})/.." ;  pwd -P )"
 
-CXX=${CXX:-g++}
-CC=${CC:-gcc}
-F77=${F77:-gfortran}
+CXX=${CXX:-mpic++}
+CC=${CC:-mpicc}
+F77=${F77:-mpifort}
 
 source ${DIR}/base/common
