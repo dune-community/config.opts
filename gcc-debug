@@ -6,6 +6,6 @@
 DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
 NAME="$(basename ${BASH_SOURCE[0]})"
 
-CXXFLAGS="-g3 -ggdb -Og -DDEBUG -DDUNE_FMatrix_WITH_CHECKING=1 -DDUNE_ISTL_WITH_CHECKING=1 -Wunused-variable -Wall -Wextra -Wc++0x-compat -Wparentheses -pedantic -Wredundant-decls -Wshadow -Wundef -Wnon-virtual-dtor -Wlogical-op"
+CXXFLAGS="-g3 -ftemplate-backtrace-limit=0 -ggdb -Og -DDEBUG -DDUNE_FMatrix_WITH_CHECKING=1 -DDUNE_ISTL_WITH_CHECKING=1 -Wunused-variable -Wall -Wextra -Wc++0x-compat -Wparentheses -pedantic -Wredundant-decls -Wshadow -Wundef -Wnon-virtual-dtor -Wlogical-op"
 
 source ${DIR}/base/gcc
