@@ -1,5 +1,5 @@
 DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ;  pwd -P )"
 NAME="$(basename ${BASH_SOURCE[0]})"
 source ${DIR}/stinson_common
-
-CMAKE_FLAGS="-G 'CodeBlocks - Unix Makefiles' -Wno-dev -DCMAKE_CXX_FLAGS='-std=c++14 -O0'"
+TYPE=DEBUG
+CMAKE_FLAGS="-G 'CodeBlocks - Unix Makefiles' -DCMAKE_BUILD_TYPE=${TYPE} ${CMAKE_EXTRA} -Wno-dev -DCMAKE_CXX_FLAGS='-std=c++14 -O0'"
