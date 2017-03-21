@@ -13,6 +13,8 @@ before_install:
   # workaround for gnutls bug is using git built against curl-openssl
   - sudo -E rm /etc/apt/sources.list.d/*git*.list
   - sudo -E add-apt-repository -y ppa:pymor/travis && sudo -E aptitude update && sudo -E aptitude install git -yq
+  - sudo curl -Lso /usr/bin/shellcheck https://github.com/caarlos0/shellcheck-docker/releases/download/v0.4.5/shellcheck
+  - sudo chmod +x /usr/bin/shellcheck
 
 before_script:
     - git clone --branch ${DUNE_BRANCH} https://gitlab.dune-project.org/core/dune-common.git
@@ -23,6 +25,7 @@ script:
         for i in $(git ls-files | \grep -Ev "README|.travis.yml") ; do
             echo "checking ${i}"
             bash ${i}
+            shellcheck ${i}
             ./dune-common/bin/dunecontrol --opts=${i} info 1> /dev/null
             pushd dune-common
             git clean -xdf
