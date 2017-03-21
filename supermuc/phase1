@@ -1,6 +1,6 @@
-CXX=icpc
-CC=icc
-FC=ifort
-CXXFLAGS="'-DNDEBUG -std=c++11 -g -w -openmp -O3  -ftz -xHost -ipo -no-prec-div'"
-CMAKE_FLAGS="-DDUNE_GRID_EXPERIMENTAL_GRID_EXTENSIONS=TRUE -DDUNE_FORCE_PYTHON3=TRUE -DDXT_TEST_PROCS=4 -DGRIDDIM=2 -DFFTW_ROOT=/lrz/sys/libraries/fftw/3.3.3/sse -Wno-dev -DCMAKE_BUILD_TYPE='RelWithDebInfo' -DUMFPACK_ROOT=/lrz/sys/libraries/suitesparse/4.2.1 -DSUITESPARSE_INCLUDE_DIR_HINTS=/lrz/sys/libraries/suitesparse/4.2.1/include -DSUITESPARSE_LIBRARY_DIR_HINTS=/lrz/sys/libraries/suitesparse/4.2.1/lib -DCMAKE_CXX_FLAGS=${CXXFLAGS}  -DCMAKE_CXX_COMPILER=${CXX} -DCMAKE_C_COMPILER=${CC} "
-BUILDDIR=$HOME/build-main-gdt-phase1
+CXX=g++
+CC=gcc
+FC=gfortran
+CXXFLAGS="'-DNDEBUG -std=c++14 -g  -O4  '"
+CMAKE_FLAGS="-DBOOST_ROOT=${BOOST_BASE} -DDUNE_GRID_EXPERIMENTAL_GRID_EXTENSIONS=TRUE -DDUNE_FORCE_PYTHON3=TRUE -DDXT_TEST_PROCS=4 -DGRIDDIM=2 -DFFTW_ROOT=/lrz/sys/libraries/fftw/3.3.3/sse -Wno-dev -DCMAKE_BUILD_TYPE='RelWithDebInfo' -DUMFPACK_ROOT=/lrz/sys/libraries/suitesparse/4.2.1 -DSUITESPARSE_INCLUDE_DIR_HINTS=/lrz/sys/libraries/suitesparse/4.2.1/include -DSUITESPARSE_LIBRARY_DIR_HINTS=/lrz/sys/libraries/suitesparse/4.2.1/lib -DCMAKE_CXX_FLAGS=${CXXFLAGS}  -DCMAKE_CXX_COMPILER=${CXX} -DCMAKE_C_COMPILER=${CC} "
+BUILDDIR=$HOME/build-main-gdt-phase1-gcc
