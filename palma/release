@@ -1,21 +1,5 @@
 DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
-CONFIGURE_FLAGS="
-  CC=icc \
-  CXX=icc \
-  CXXFLAGS='-g -std=c++11 \
--funroll-loops -m64 -mfpmath=sse -falign-loops -mtune=native -march=native -pipe -fomit-frame-pointer -O4 \
-  -funroll-loops \
-  -ffast-math -fomit-frame-pointer -msse3 -mfpmath=sse \
-  -w -Wfatal-errors \
-  -DNDEBUG \
-    --param large-unit-insns=1000 \
-    --param inline-unit-growth=1000 \
-    --param max-inline-insns-single=1000 \
-    --param large-function-growth=1000 \
-    --param large-function-insns=1000'\
-  --disable-documentation \
-  --enable-parallel \
-  INKSCAPE=no \
-"
 NAME="$(basename ${BASH_SOURCE[0]})"
+CXXFLAGS="'-DNDEBUG -std=c++14 -O4 -g -w -funroll-loops -m64 -mfpmath=sse -falign-loops -mtune=native -march=native  -pipe -fomit-frame-pointer '"
+TYPE=RelWithDebInfo
 source ${DIR}/palma_common

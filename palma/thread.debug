@@ -1,12 +1,6 @@
 DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
 NAME="$(basename ${BASH_SOURCE[0]})"
-source ${DIR}/palma_common
-CONFIGURE_FLAGS="
-  CC=icc \
-  CXX=icc \
-  CXXFLAGS='-DDEBUG -g -O3 -std=c++0x -fno-omit-frame-pointer -fsanitize=thread' \
-  --disable-documentation \
-  --enable-parallel \
-  INKSCAPE=no \
-"
 
+CXXFLAGS="'-DDEBUG -g3 -ggdb -std=c++14  -O0 -fsanitize=thread -ftemplate-backtrace-limit=0'"
+
+source ${DIR}/gcc_base
