@@ -7,7 +7,7 @@ CONFIGURE_FLAGS=" \
   CC=gcc \
   CXX=g++ \
   F77=gfortran \
-  CXXFLAGS='-std=c++11 -Os -fPIC -fno-strict-aliasing -ftemplate-backtrace-limit=0 -w -DDNDEBUG' \
+  CXXFLAGS='-std=c++11 - -O3 -fPIC -fno-strict-aliasing -ftemplate-backtrace-limit=0 -w -DNDEBUG' \
   INKSCAPE=no"
 CMAKE_FLAGS="
 -Wno-dev
@@ -21,5 +21,7 @@ CMAKE_FLAGS="
 -DMETIS_DIR=${DUNE_PARMETIS_ROOT}
 -DPARMETIS_ROOT=${DUNE_PARMETIS_ROOT}
 -DFFTW_ROOT=${DUNE_FFTW_ROOT}
+-DMSFEM_MACRO_GRIDDIM=2
+-DCMAKE_BUILD_TYPE=Release
 -DCMAKE_INSTALL_PREFIX='/p/sms/sppexa/share/soft/dune-prj/lib' "
 BUILDDIR=build-release
