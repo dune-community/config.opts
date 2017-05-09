@@ -1,7 +1,11 @@
-CONFIGURE_FLAGS="CXX=pollycc CC=clang F77=gfortran CXXFLAGS='-DNDEBUG -std=c++11  -O3 -mllvm -polly' \
-  --enable-fieldvector-size-is-method \
-  --enable-dunedevel \
-  --disable-documentation  INKSCAPE=no"
-CMAKE_FLAGS="-GNinja -Wno-dev -DPETSC_DIR=/usr/lib/petsc -DPETSC_ARCH=linux-gnu-cxx-opt  -DCMAKE_BUILD_TYPE=RELEASE"
+DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
+NAME="$(basename ${BASH_SOURCE[0]})"
 
-BUILDDIR=/home/r_milk01/projekte/uni/dune/build/dune-multiscale/polly
+CXX=pollycc
+CC=clang
+CXXFLAGS="'-g3 -ggdb -std=c++14 -O3 -mllvm -polly'"
+F77=/bin/false
+CMAKE_EXTRA="-DCMAKE_Fortran_COMPILER=/bin/false"
+
+source ${DIR}/clang_base
+

@@ -3,14 +3,10 @@
 # Copyright holders: Rene Milk, Felix Schindler
 # License: BSD 2-Clause License (http://opensource.org/licenses/BSD-2-Clause)
 
-CONFIGURE_FLAGS=" \
-  CC=gcc \
-  F77=gfortran \
-  CXX=g++ \
-  CXXFLAGS='-std=c++0x' \
-  --enable-experimental-grid-extensions \
-  --enable-documentation \
-  "
+DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
+NAME="$(basename ${BASH_SOURCE[0]})"
 
-CMAKE_FLAGS="-Wno-dev"
-BUILDDIR=build-docs
+TYPE=Debug
+CXXFLAGS="-O0"
+
+source ${DIR}/base/gcc

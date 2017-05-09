@@ -1,6 +1,0 @@
-CONFIGURE_FLAGS="CXX=/usr/share/clang/scan-build/c++-analyzer CC=/usr/share/clang/scan-build/ccc-analyzer F77=gfortran CXXFLAGS='-DDEBUG -g3 -ggdb -std=c++11  -O0' \
-  --enable-parallel \
-  --disable-documentation  INKSCAPE=no"
-CMAKE_FLAGS="-GNinja -Wno-dev -DCMAKE_BUILD_TYPE=DEBUG"
-
-BUILDDIR=/home/r_milk01/projekte/uni/dune/build/dune-multiscale/analyzer
