@@ -1,6 +1,12 @@
 F77=${F77:-gfortran}
 TYPE=${TYPE:-Debug}
 BDIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; cd ../../ ; pwd -P )"
-BUILDDIR=/home/r_milk01/projekte/uni/dune/build/$(basename ${BDIR})/${NAME}
+
+if [[ ${HOSTNAME} == *"docker"* ]]; then
+  BUILDDIR=${HOME}/$(basename ${BDIR})_${NAME}
+else
+  BUILDDIR=${HOME}/projekte/uni/dune/build/$(basename ${BDIR})/${NAME}
+fi
+
 
 CMAKE_EXTRA="-DDUNE_GRID_EXPERIMENTAL_GRID_EXTENSIONS=TRUE -DDUNE_FORCE_PYTHON3=TRUE -DDXT_TEST_PROCS=4"
