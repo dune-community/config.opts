@@ -25,7 +25,6 @@ CMAKE_FLAGS="\
       -std=c++14  \
       ${OPT} \
       ${STDLIB} \
-      -w \
       -fprofile-arcs \
       -fPIC \
       -coverage \
