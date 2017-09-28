@@ -1,7 +1,9 @@
 if [[ ${CC} == *"clang"* ]] ; then
   TBB_CMAKE="-DTBB_DISABLE_FINAL_CHECK=1"
+  STDLIB="-stdlib=libc++"
 else
   TBB_CMAKE=""
+  STDLIB=""
 fi
 
 OPT=${OPT:--O0}
@@ -20,8 +22,9 @@ CMAKE_FLAGS="\
       -DDEBUG \
       -g3 \
       -ggdb \
-      -std=c++11  \
+      -std=c++14  \
       ${OPT} \
+      ${STDLIB} \
       -w \
       -fprofile-arcs \
       -fPIC \
