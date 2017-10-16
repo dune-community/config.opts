@@ -1,10 +1,10 @@
 if [[ ${CC} == *"clang"* ]] ; then
   TBB_CMAKE="-DTBB_DISABLE_FINAL_CHECK=1"
+  OPT=${OPT:--O0}
 else
   TBB_CMAKE=""
+  OPT=${OPT:--Og}
 fi
-
-OPT=${OPT:--O0}
 
 DXT_TEST_TIMEOUT=1200
 DXT_TEST_PROCS=2

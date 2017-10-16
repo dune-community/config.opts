@@ -1,5 +1,4 @@
 DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ;  pwd -P )"
 GENERATOR="-GNinja"
-OPT=${OPT:--O0}
 source ${DIR}/travis.common
 
