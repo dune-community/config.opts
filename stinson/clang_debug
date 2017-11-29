@@ -1,7 +1,7 @@
 DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
 NAME="$(basename ${BASH_SOURCE[0]})"
 
-CXXFLAGS="'-DDEBUG -g3 -ggdb -std=c++11  -O0 --coverage -ftemplate-backtrace-limit=0'"
+CXXFLAGS="'-DDXT_DISABLE_LARGE_TESTS=1 -DDEBUG -g3 -ggdb -std=c++11  -O0 --coverage -ftemplate-backtrace-limit=0'"
 
 source ${DIR}/clang_base
 
