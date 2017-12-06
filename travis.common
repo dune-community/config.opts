@@ -22,10 +22,8 @@ CMAKE_FLAGS="\
       -ggdb \
       -std=c++11  \
       ${OPT} \
-      -fprofile-arcs \
       -fPIC \
-      -coverage \
-      -ftest-coverage -DDXT_DISABLE_LARGE_TESTS=1' \
+      -DDXT_DISABLE_LARGE_TESTS=1' \
     -DENABLE_HEADERCHECK=1 \
     -DDISABLE_UBUNTU_WORKAROUND=1 \
     -DDUNE_PYTHON_INSTALL_USER=travis \
