@@ -6,7 +6,7 @@
 DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
 NAME="$(basename ${BASH_SOURCE[0]})"
 
-TYPE=RelWithDebInfo
+TYPE=Release
 CXXFLAGS="-Os -w -DDNDEBUG -DNDEBUG"
 
 source ${DIR}/base/gcc
