@@ -1,9 +1,0 @@
-DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
-NAME="$(basename ${BASH_SOURCE[0]})"
-
-CXXFLAGS="' -DDEBUG -g3 -ggdb -std=c++0x -O0'" 
-CXX=g++-4.9
-CC=gcc-4.9
-
-source ${DIR}/gcc_base
-
