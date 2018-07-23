@@ -2,7 +2,7 @@ F77=${F77:-gfortran}
 TYPE=${TYPE:-Debug}
 BDIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; cd ../../ ; pwd -P )"
 
-if [[ ${HOSTNAME} == *"docker"* ]]; then
+if [[ ${DXT_DOCKER} ]]; then
   BUILDDIR=${HOME}/$(basename ${BDIR})_${NAME}
 else
   BUILDDIR=${HOME}/projekte/uni/dune/build/$(basename ${BDIR})/${NAME}
