@@ -44,3 +44,4 @@ matrix:
     - env: DUNE_BRANCH=releases/2.3
     - env: DUNE_BRANCH=releases/2.4
     - env: DUNE_BRANCH=releases/2.5
+    - env: DUNE_BRANCH=releases/2.6
