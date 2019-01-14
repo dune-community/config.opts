@@ -1,6 +1,6 @@
 language: generic
 sudo: required
-dist: trusty
+dist: xenial
 
 addons:
   apt:
@@ -8,11 +8,6 @@ addons:
     packages: &commonpackages
     - cmake
     - cmake-data
-
-before_install:
-  # workaround for gnutls bug is using git built against curl-openssl
-  - sudo -E rm /etc/apt/sources.list.d/*git*.list
-  - sudo -E add-apt-repository -y ppa:pymor/travis && sudo -E aptitude update && sudo -E aptitude install git -yq
 
 before_script:
     - git clone --branch ${DUNE_BRANCH} https://github.com/dune-mirrors/dune-common.git
