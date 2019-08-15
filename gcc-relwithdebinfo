@@ -7,6 +7,6 @@ DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
 NAME="$(basename ${BASH_SOURCE[0]})"
 
 TYPE=RelWithDebInfo
-CXXFLAGS="-g3 -ggdb -Os -w -DDNDEBUG -DNDEBUG"
+CXXFLAGS="-g3 -ggdb -Os -w -DDNDEBUG -DNDEBUG -Werror=return-type"
 
 source ${DIR}/base/gcc
