@@ -3,7 +3,7 @@ if [[ ${CC} == *"clang"* ]] ; then
   OPT=${OPT:--O0}
 else
   TBB_CMAKE=""
-  OPT="${OPT:--Og} --coverage -fprofile-arcs -ftest-coverage"
+  OPT="${OPT:--Og} "
 fi
 
 DXT_TEST_TIMEOUT=1200
