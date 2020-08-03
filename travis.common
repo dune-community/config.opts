@@ -21,7 +21,7 @@ CMAKE_FLAGS="\
       -DDEBUG \
       -g3 \
       -ggdb \
-      -std=c++14  \
+      -std=c++17  \
       ${OPT} \
       -fPIC \
       -DDXT_DISABLE_LARGE_TESTS=1' \
