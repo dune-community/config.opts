@@ -5,3 +5,4 @@ src:*/dune/uggrid/gm/ugm.cc
 src:*tbb/task.h
 src:*tbb/internal/../task.h
 src:*tbb/parallel_reduce.h
+src:*dune/istl/solver.hh
