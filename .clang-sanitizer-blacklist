@@ -5,6 +5,7 @@ src:*/dune/uggrid/gm/ugm.cc
 src:*tbb/task.h
 src:*tbb/internal/../task.h
 src:*tbb/parallel_reduce.h
+src:*tbb/enumerable_thread_specific.h
 
 # When called with an initial defect of 0, the iterative solvers divide by 0
 # and thus clang-sanitizer complains. Starting with clang-9, float-division-by-zero
@@ -25,7 +26,21 @@ src:*dune/istl/solver.hh
 src:*/8/bits/unique_ptr.h
 src:*/8/bits/std_function.h
 src:*/8/bits/shared_ptr_base.h
-src:*/python/dune/xt/*
-src:*/dune/pybindxi/*
 src:*dune/grid/utility/structuredgridfactory.hh
 src:*dune/alugrid/*
+src:*/python/dune/xt/*
+src:*/dune/pybindxi/*
+src:*dune/xt/common/parallel/threadstorage.hh
+src:*dune/xt/grid/bound-object.hh
+src:*dune/xt/grid/walker.hh
+src:*dune/xt/functions/base/function-as-grid-function.hh
+src:*dune/xt/functions/interfaces/function.hh
+src:*dune/xt/functions/grid-function.hh
+src:*dune/xt/functions/interfaces/grid-function.hh
+src:*dune/gdt/local/assembler/bilinear-form-assemblers.hh
+src:*dune/gdt/local/bilinear-forms/integrals.hh
+src:*dune/gdt/local/integrands/laplace.hh
+src:*dune/gdt/operators/matrix-based.hh
+src:*dune/gdt/tools/sparsity-pattern.hh
+src:*/python/dune/gdt/*
+
