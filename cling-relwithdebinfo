@@ -1,0 +1,13 @@
+# This file is part of the dune-config-opts project:
+#   http://users.dune-project.org/projects/dune-config-opts
+# Copyright holders: Rene Milk, Felix Schindler
+# License: BSD 2-Clause License (http://opensource.org/licenses/BSD-2-Clause)
+
+DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
+NAME="$(basename ${BASH_SOURCE[0]})"
+
+TYPE=RelWithDebInfo
+CXXFLAGS="-O2 -w -DDNDEBUG -DNDEBUG"
+#CXXFLAGS="-stdlib=libc++ -I/usr/include/c++/10.2.0/ -I/usr/include/c++/10.2.0/x86_64-pc-linux-gnu -lc++ -lc++abi -lm -lc -lgcc_s -lgcc -O2 -w -DDNDEBUG -DNDEBUG"
+
+source ${DIR}/base/cling
