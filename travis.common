@@ -4,7 +4,7 @@ if [[ ${CC} == *"clang"* ]] ; then
   # The -Wno-delete-abstract-non-virtual-dtor is here to avoid a lot of warnings from dune/xt/grid/boundaryinfo/*
   # We do not want to add a virtual destructor there to be able to use the classes in a constexpr context.
   # Once we use C++20, we may be able to add that destructor and reenable the warnings.
-  SUPPRESSED_WARNING="-Wno-delete-abstract-non-virtual-dtor"
+  SUPPRESSED_WARNINGS="-Wno-delete-abstract-non-virtual-dtor"
   SANITIZER_FLAGS="-fsanitize=address -fsanitize=undefined -fno-sanitize-recover=undefined -fsanitize-blacklist=${DIR}/.clang-sanitizer-blacklist"
 else
   TBB_CMAKE=""
