@@ -7,6 +7,6 @@ DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
 NAME="$(basename ${BASH_SOURCE[0]})"
 
 TYPE=Release
-CXXFLAGS="-O2 -w -DDNDEBUG -DNDEBUG"
+CXXFLAGS="-O2 -w -march=native -mtune=native -DDNDEBUG -DNDEBUG"
 
 source ${DIR}/base/clang

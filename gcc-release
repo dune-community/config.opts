@@ -7,6 +7,6 @@ DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
 NAME="$(basename ${BASH_SOURCE[0]})"
 
 TYPE=Release
-CXXFLAGS="-Os -w -DDNDEBUG -DNDEBUG"
+CXXFLAGS="-Os -mtune=native -march=native -w -DDNDEBUG -DNDEBUG"
 
 source ${DIR}/base/gcc
