@@ -31,6 +31,8 @@ src:*/8/bits/shared_ptr_base.h
 src:*dune/grid/utility/structuredgridfactory.hh
 src:*dune/alugrid/*
 src:*/python/dune/xt/*
+src:*/dune/gdt/operators/matrix.hh
+src:*/dune/gdt/operators/bilinear-form.hh
 src:*/dune/pybindxi/*
 src:*dune/xt/common/parallel/threadstorage.hh
 src:*dune/xt/grid/bound-object.hh
