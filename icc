@@ -5,9 +5,11 @@
 
 DIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; pwd -P )"
 NAME="$(basename ${BASH_SOURCE[0]})"
+BDIR="$(cd "$(dirname ${BASH_SOURCE[0]})" ; cd ../../ ; pwd -P )"
+BUILDDIR=/scratch/tmp/$(basename ${BDIR})/${NAME}
 
-TYPE=RelWithDebInfo
-CXXFLAGS="-Os -w -DDNDEBUG -DNDEBUG"
+TYPE=Release
+CXXFLAGS="-O3 -std=c++17 -w -xHost -ipo -DDNDEBUG -DNDEBUG"
 
 CXX=${CXX:-icpc}
 CC=${CC:-icc}
